@@ -4,92 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoVida — Inicio</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS propio -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <header>
-        <h1>EcoVida</h1>
-        <p>Construyendo un futuro más verde</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="programas.html">Programas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+    <!-- NAVBAR con hamburguesa -->
+    <nav class="navbar navbar-expand-lg navbar-ecovida">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🌿 EcoVida</a>
+            <button class="navbar-toggler border-0" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-1">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programas.html">Programas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Construyendo un futuro más verde</h1>
+            <p class="mt-3 mb-4">Somos una ONG dedicada al cuidado del medioambiente.<br>
+            Trabajamos con comunidades, escuelas y municipios.</p>
+            <a href="programas.html" class="btn btn-eco btn-lg me-2">Ver programas</a>
+            <a href="contacto.html" class="btn btn-outline-light btn-lg">Sumate</a>
+        </div>
+    </section>
 
     <main>
 
-        <section id="bienvenida">
-            <h2>Bienvenidos a EcoVida</h2>
-            <p>
-                Somos una organización sin fines de lucro dedicada al cuidado del medioambiente.
-                Trabajamos junto a comunidades, escuelas y municipios para construir un presente
-                más consciente y un futuro más sostenible.
-            </p>
-            <p><a href="#programas">Conocé nuestros programas</a></p>
-            <figure>
-                <img src="https://picsum.photos/seed/ecovida1/800/400" alt="Voluntarios plantando árboles en un parque urbano">
-                <figcaption>Voluntarios de EcoVida en una jornada de reforestación, <time datetime="2025-04-10">abril de 2025</time>.</figcaption>
-            </figure>
+        <!-- MISIÓN -->
+        <section class="seccion">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6">
+                        <h2>Nuestra misión</h2>
+                        <p>En EcoVida creemos que el cambio ambiental comienza en cada barrio.
+                        Nuestra misión es <strong>concientizar, educar y actuar</strong> para reducir
+                        el impacto humano sobre el medioambiente, promoviendo hábitos sustentables
+                        en la vida cotidiana.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <figure>
+                            <img src="https://picsum.photos/seed/ecovida1/800/400" alt="Voluntarios plantando árboles" class="img-fluid rounded">
+                            <figcaption>Voluntarios de EcoVida en una jornada de reforestación, <time datetime="2025-04-10">abril de 2025</time>.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Nuestra misión</h2>
-            <p>
-                En EcoVida creemos que el cambio ambiental comienza en cada barrio.
-                Nuestra misión es <strong>concientizar, educar y actuar</strong> para reducir
-                el impacto humano sobre el medioambiente, promoviendo hábitos sustentables
-                en la vida cotidiana.
-            </p>
+        <!-- ÁREAS DE TRABAJO — Grilla Bootstrap -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="text-center mb-4">Áreas de trabajo</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://picsum.photos/seed/reciclaje/600/300" class="card-img-top" alt="Reciclaje comunitario">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge badge-eco mb-2 align-self-start">Programa</span>
+                                <h5 class="card-title">Reciclaje Comunitario</h5>
+                                <p class="card-text text-muted flex-grow-1">Promovemos la separación de residuos en hogares, escuelas y espacios públicos.</p>
+                                <a href="programas.html#reciclaje" class="btn btn-outline-eco mt-3">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://picsum.photos/seed/ecovida2/600/300" class="card-img-top" alt="Limpieza de espacios verdes">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge badge-eco mb-2 align-self-start">Programa</span>
+                                <h5 class="card-title">Limpieza de Espacios Verdes</h5>
+                                <p class="card-text text-muted flex-grow-1">Organizamos jornadas de voluntariado en parques y plazas de todo el país.</p>
+                                <a href="programas.html#limpieza" class="btn btn-outline-eco mt-3">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://picsum.photos/seed/educacion/600/300" class="card-img-top" alt="Educación ambiental">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge badge-eco mb-2 align-self-start">Programa</span>
+                                <h5 class="card-title">Educación Ambiental</h5>
+                                <p class="card-text text-muted flex-grow-1">Brindamos charlas y talleres gratuitos para instituciones educativas.</p>
+                                <a href="programas.html#educacion" class="btn btn-outline-eco mt-3">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="programas.html" class="btn btn-eco">Ver todos los programas</a>
+                </div>
+            </div>
         </section>
 
-        <section id="programas">
-            <h2>Áreas de trabajo</h2>
-            <p>Estas son las tres áreas principales en las que trabajamos:</p>
-            <ul>
-                <li>
-                    <strong>Reciclaje Comunitario:</strong> promovemos la separación de residuos
-                    en hogares, escuelas y espacios públicos.
-                </li>
-                <li>
-                    <strong>Limpieza de Espacios Verdes:</strong> organizamos jornadas de
-                    voluntariado en parques y plazas de todo el país.
-                </li>
-                <li>
-                    <strong>Educación Ambiental:</strong> brindamos charlas y talleres gratuitos
-                    para instituciones educativas y organizaciones comunitarias.
-                </li>
-            </ul>
-            <p><a href="programas.html">Ver todos los programas</a></p>
-            <figure>
-                <img src="https://picsum.photos/seed/ecovida2/800/400" alt="Jornada de limpieza en un espacio verde con familias participando">
-                <figcaption>Jornada de limpieza en el Parque Centenario, <time datetime="2025-09-15">septiembre de 2025</time>.</figcaption>
-            </figure>
-        </section>
-
-        <section>
-            <h2>Sumáte a EcoVida</h2>
-            <p>
-                Podés ser parte del cambio. Escribinos a
-                <a href="mailto:ecovida@ong.com">ecovida@ong.com</a> o
-                <a href="contacto.html">completá el formulario de contacto</a>.
-            </p>
+        <!-- CTA -->
+        <section class="seccion">
+            <div class="container text-center">
+                <h2>Sumate a EcoVida</h2>
+                <p class="mb-4">Podés ser parte del cambio. Escribinos o completá el formulario de contacto.</p>
+                <a href="mailto:ecovida@ong.com" class="btn btn-eco me-2">ecovida@ong.com</a>
+                <a href="contacto.html" class="btn btn-outline-eco">Formulario de contacto</a>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <address>
-            <a href="mailto:ecovida@ong.com">ecovida@ong.com</a> |
-            <a href="tel:+541112345678">11-1234-5678</a>
-        </address>
-        <p>© 2025 EcoVida — Todos los derechos reservados</p>
+    <!-- FOOTER -->
+    <footer class="footer-eco">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <strong class="d-block mb-1" style="color:#fff">🌿 EcoVida</strong>
+                    <address class="mb-0">
+                        <a href="mailto:ecovida@ong.com">ecovida@ong.com</a> |
+                        <a href="tel:+541112345678">11-1234-5678</a>
+                    </address>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">© 2025 EcoVida — Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
