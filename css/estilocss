@@ -1,4 +1,6 @@
-root {
+/* ===== EcoVida — CSS propio (convive con Bootstrap) ===== */
+
+:root {
     --color-primario: #1b4332;
     --color-secundario: #2d6a4f;
     --color-acento: #52b788;
@@ -6,59 +8,56 @@ root {
     --color-texto: #1c1c1c;
     --color-texto-claro: #555555;
     --color-blanco: #ffffff;
-    --fuente: Verdana, Geneva, Tahoma, sans-serif;
+    --fuente: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: var(--fuente);
     font-size: 1rem;
     color: var(--color-texto);
     background-color: var(--color-fondo);
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
-header {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    padding: 1.5rem 1rem;
+
+/* === Navbar === */
+.navbar-ecovida { background-color: var(--color-primario) !important; }
+.navbar-ecovida .navbar-brand {
+    font-size: 1.4rem; font-weight: 800;
+    color: var(--color-blanco) !important; letter-spacing: 1px;
 }
- 
-header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
- 
-header p {
-    font-size: 1rem;
-    font-style: italic;
-}
- 
-nav {
-    background-color: var(--color-secundario);
-    padding: 0.75rem 1rem;
-}
- 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
- 
-nav a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-}
- 
-nav a:hover {
-    color: var(--color-acento);
-    text-decoration: underline;
-}
+.navbar-ecovida .nav-link { color: rgba(255,255,255,0.85) !important; font-weight: 600; }
+.navbar-ecovida .nav-link:hover,
+.navbar-ecovida .nav-link.active { color: var(--color-acento) !important; }
+
+/* === Hero === */
+.hero { background-color: var(--color-primario); color: var(--color-blanco); padding: 4.5rem 0; }
+.hero h1 { font-size: 2.5rem; font-weight: 800; }
+.hero p { font-size: 1.1rem; opacity: 0.9; }
+
+/* === Botones === */
+.btn-eco { background-color: var(--color-acento); color: var(--color-primario); font-weight: 700; border: none; }
+.btn-eco:hover { background-color: #40916c; color: var(--color-blanco); }
+.btn-outline-eco { border: 2px solid var(--color-acento); color: var(--color-primario); font-weight: 700; background: transparent; }
+.btn-outline-eco:hover { background-color: var(--color-acento); color: var(--color-primario); }
+
+/* === Secciones === */
+.seccion { padding: 3.5rem 0; }
+.seccion-gris { background-color: #eef1eb; }
+.seccion h2 { color: var(--color-primario); font-weight: 700; margin-bottom: 1rem; }
+
+/* === Cards === */
+.card { border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.2s; height: 100%; }
+.card:hover { transform: translateY(-4px); }
+.card-title { color: var(--color-primario); font-weight: 700; }
+
+/* === Footer === */
+.footer-eco { background-color: var(--color-primario); color: rgba(255,255,255,0.85); padding: 2rem 0; font-size: 0.9rem; }
+.footer-eco a { color: var(--color-acento); text-decoration: none; }
+.footer-eco a:hover { color: var(--color-blanco); text-decoration: underline; }
+
+/* === Figcaption === */
+figcaption { font-size: 0.85rem; color: var(--color-texto-claro); margin-top: 0.5rem; font-style: italic; }
+
+/* === Badge eco === */
+.badge-eco { background-color: var(--color-acento); color: var(--color-primario); font-weight: 700; }
