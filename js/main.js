@@ -10,6 +10,25 @@ if (contador) {
     contador.textContent = "Llevamos " + años + " años cuidando el medioambiente.";
 }
 
+// 2. BUSCADOR DE PROGRAMAS
+// Muestra u oculta las cards según lo que escribe el usuario
+var buscador = document.getElementById("buscador-programas");
+ 
+if (buscador) {
+    buscador.addEventListener("input", function () {
+        var texto = buscador.value.toLowerCase();
+        var cards = document.querySelectorAll(".programa-card");
+ 
+        cards.forEach(function (card) {
+            if (card.textContent.toLowerCase().includes(texto)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+}
+
 // 4. VALIDACIÓN DEL FORMULARIO DE CONTACTO
 var formulario = document.getElementById("form-contacto");
  

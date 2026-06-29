@@ -45,7 +45,7 @@
         <!-- Reciclaje -->
         <section class="seccion seccion-gris" id="reciclaje">
             <div class="container">
-                <article>
+                <article  class="programa-card"></article>
                     <div class="row align-items-center g-4">
                         <div class="col-md-6">
                             <span class="badge badge-eco mb-2">Programa 1</span>
@@ -143,6 +143,19 @@
                 </article>
             </div>
         </section>
+
+         <section class="seccion seccion-gris">
+    <div class="container">
+        <div class="col-md-6 mx-auto text-center">
+            <h2>Generá tu tarjeta de voluntario/a</h2>
+            <p class="text-muted mb-4">Completá los datos y compartí tu compromiso ambiental.</p>
+            <input type="text" id="nombre-tarjeta" class="form-control mb-2" placeholder="Tu nombre">
+            <input type="text" id="compromiso-tarjeta" class="form-control mb-3" placeholder="Mi compromiso ambiental...">
+            <button id="btn-generar-tarjeta" class="btn btn-eco">Generar tarjeta</button>
+            <div id="resultado-tarjeta"></div>
+        </div>
+    </div>
+</section>
 
         <!-- Aside: nueva propuesta -->
         <section class="seccion">
