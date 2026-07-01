@@ -1,15 +1,11 @@
-
-// 1. CONTADOR DE AÑOS
-// Calcula cuántos años pasaron desde que se fundó EcoVida
 var anioFundacion = 2015;
 var anioActual = new Date().getFullYear();
 var años = anioActual - anioFundacion;
- 
+
 var contador = document.getElementById("contador-trayectoria");
 if (contador) {
     contador.textContent = "Llevamos " + años + " años cuidando el medioambiente.";
 }
-
  
 // 2. BUSCADOR DE PROGRAMAS
 // Muestra u oculta las cards según lo que escribe el usuario
