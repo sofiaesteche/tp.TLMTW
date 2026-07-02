@@ -6,7 +6,7 @@ var años = anioActual - anioFundacion;
 var contador = document.getElementById("contador-trayectoria");
 if (contador) {
     contador.textContent = "Llevamos " + años + " años cuidando el medioambiente.";
-}
+} 
 
 // 3. GENERADOR DE TARJETA DE VOLUNTARIO
 // Arma una tarjeta con el nombre y compromiso del usuario
